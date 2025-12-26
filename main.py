@@ -12,7 +12,7 @@ careers = {
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.send_message(message.chat.id, "Привет! Я помогу тебе выбрать карьеру. Напиши 'творческий', 'технический' или задай вопрос о профессии. А если вам мало тех профессий то напиши.")
+    bot.send_message(message.chat.id, "Привет! Я помогу тебе выбрать карьеру. Напиши 'творческий', 'технический' или задай вопрос о профессии. А если вам мало тех профессий то напиши. ✋😐🤚 ")
 
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
@@ -20,7 +20,7 @@ def handle_message(message):
 
     if user_input in careers: 
         recommendations = ", ".join(careers[user_input])
-        bot.send_message(message.chat.id, f"Вот профессии в направлении '{user_input}': {recommendations}.")
+        bot.send_message(message.chat.id, f"Вот профессии в направлении 🗿 '{user_input}': {recommendations}.")
     else:
         ai_response = ya.gpt(user_input) 
         bot.send_message(message.chat.id, ai_response) 
